@@ -7,6 +7,7 @@ import db from "./config/database.js";
 import UserRoute from "./routes/UserRoute.js";
 import ProductRoute from "./routes/ProductRoute.js";
 import AuthRoute from "./routes/AuthRoute.js";
+import CSRFRoute from "./routes/CSRFRoute.js";
 
 dotenv.config()
 
@@ -42,6 +43,7 @@ app.use(express.json())
 app.use(UserRoute);
 app.use(ProductRoute);
 app.use(AuthRoute);
+app.use(CSRFRoute);
 
 // store.sync();
 
